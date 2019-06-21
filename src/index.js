@@ -1,6 +1,10 @@
 let express = require('express');
+let keys = require('../config/keys');
+let mongoose = require('mongoose');
+let bodyparser = require('body-parser');
 
 let app = express();
+mongoose.connect(keys.mongoURI);
 
 let contactsRoute = require('./routes/contacts');
 

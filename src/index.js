@@ -4,7 +4,10 @@ let mongoose = require('mongoose');
 let bodyparser = require('body-parser');
 
 let app = express();
-mongoose.connect(keys.mongoURI);
+mongoose.connect(keys.mongoURI, {
+    useNewUrlParser: true,
+    useCreateIndex: true
+});
 
 let contactsRoute = require('./routes/contacts');
 

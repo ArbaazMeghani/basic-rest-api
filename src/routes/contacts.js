@@ -1,5 +1,6 @@
 let express = require('express');
 let router = express.Router();
+let contactsService = require('../services/contactsService');
 
 router.get('/contacts', (req,res) => {
     if(req.query.firstname && req.query.lastname) {

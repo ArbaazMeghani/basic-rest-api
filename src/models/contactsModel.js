@@ -5,7 +5,8 @@ let contactSchema = mongoose.Schema({
     lastname: String,
     number: {
         type: String,
-        require: true
+        required: true,
+        unique: true
     }
 });
 

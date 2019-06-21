@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/ArbaazMeghani/basic-rest-api#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.6.0"
   },
   "devDependencies": {
     "nodemon": "^1.19.1"

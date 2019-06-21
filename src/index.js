@@ -1,8 +1,13 @@
-let express = require('express')
+let express = require('express');
 
 let app = express();
 
-let contactsRoute = require('./routes/contacts')
+let contactsRoute = require('./routes/contacts');
+
+app.use((req, res, next) => {
+    console.log(` ${new Date().toString()} => ${req.method} ${req.originalUrl}`);
+    next();
+});
 app.use('/api/v1', contactsRoute);
 
 const port = process.env.port || 3000;

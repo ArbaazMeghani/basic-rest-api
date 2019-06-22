@@ -10,13 +10,27 @@ Built using Node/Express and MongoDB</p>
 <h1 id="end-points">End Points</h1>
 <p>All end points are prefixed with <code>https://contacts-rest-api.herokuapp.com/api/v1</code></p>
 <p>Get All Contacts</p>
-<pre><code>/contacts
+<pre><code>GET /contacts
 </code></pre>
 <p>Get a Contact by Phone Number</p>
-<pre><code>/contacts/:number
+<pre><code>GET /contacts/:number
+</code></pre>
+<p>Create a new Contact</p>
+<pre><code>POST /contacts
 </code></pre>
 <h1 id="parameters">Parameters</h1>
 <p>Currently there are 2 support parameters.</p>
 <pre><code>/contacts?firstname=&lt;first_name&gt;&amp;lastname=&lt;last_name&gt;
+</code></pre>
+<h1 id="schema">Schema</h1>
+<pre><code>{
+    firstname: String,
+    lastname: String,
+    number: {
+		type: String,
+		required: true,
+		unique: true
+	}
+}
 </code></pre>
 

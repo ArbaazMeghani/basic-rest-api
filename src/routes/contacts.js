@@ -12,7 +12,7 @@ router.get('/contacts', (req,res) => {
 router.get('/contacts/:number', (req,res) => {
     contactsService.getContact(req.params.number)
     .then(doc => {
-        res.sendStatus(doc);
+        res.send(doc);
     })
 });
 

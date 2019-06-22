@@ -1,7 +1,7 @@
 {
   "name": "basic-rest-api",
   "version": "1.0.0",
-  "description": "A basic rest api using node/express with mongodb",
+  "description": "A basic rest api using node/express with mongodb for a contacts list",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ArbaazMeghani/basic-rest-api.git"
+    "url": "git+https://github.com/ArbaazMeghani/contacts-rest-api.git"
   },
   "author": "Arbaaz Meghani",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ArbaazMeghani/basic-rest-api/issues"
+    "url": "https://github.com/ArbaazMeghani/contacts-rest-api/issues"
   },
-  "homepage": "https://github.com/ArbaazMeghani/basic-rest-api#readme",
+  "homepage": "https://github.com/ArbaazMeghani/contacts-rest-api#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",

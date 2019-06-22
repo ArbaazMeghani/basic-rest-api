@@ -19,4 +19,15 @@ Built using Node/Express and MongoDB</p>
 <p>Currently there are 2 support parameters.</p>
 <pre><code>/contacts?firstname=&lt;first_name&gt;&amp;lastname=&lt;last_name&gt;
 </code></pre>
+<h1 id="schema">Schema</h1>
+<pre><code>{
+    firstname: String,
+    lastname: String,
+    number: {
+		type: String,
+		required: true,
+		unique: true
+	}
+}
+</code></pre>
 

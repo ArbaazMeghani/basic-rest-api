@@ -18,6 +18,12 @@ Built using Node/Express and MongoDB</p>
 <p>Create a new Contact</p>
 <pre><code>POST /contacts
 </code></pre>
+<p>Update a Contact</p>
+<pre><code>PUT /contacts/:number
+</code></pre>
+<p>Delete a Contact</p>
+<pre><code>DELETE /contacts/:number
+</code></pre>
 <h1 id="parameters">Parameters</h1>
 <p>Currently there are 2 support parameters.</p>
 <pre><code>/contacts?firstname=&lt;first_name&gt;&amp;lastname=&lt;last_name&gt;

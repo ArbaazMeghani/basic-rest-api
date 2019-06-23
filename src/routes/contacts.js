@@ -4,15 +4,15 @@ let contactsService = require('../services/contactsService');
 
 router.get('/contacts', (req,res) => {
     contactsService.getAllContacts(req.query.firstname, req.query.lastname)
-    .then(doc => {
-        res.send(doc);
+    .then(data => {
+        res.status(data.status).send(data.doc);
     });
 });
 
 router.get('/contacts/:number', (req,res) => {
     contactsService.getContact(req.params.number)
-    .then(doc => {
-        res.send(doc);
+    .then( data => {
+        res.status(data.status).send(data.doc);
     })
 });
 
@@ -22,8 +22,8 @@ router.post('/contacts', (req, res) => {
         return;
     }
     contactsService.createContact(req.body)
-    .then( (doc, status) => {
-        res.status(status).sendStatus(doc);
+    .then( data => {
+        res.status(data.status).send(data.doc);
     });
 });
 
@@ -33,8 +33,15 @@ router.put('/contacts/:number', (req, res) => {
         return;
     }
     contactsService.updateContact(req.params.number, req.body)
-    .then( (doc, status) => {
-        res.status(status).sendStatus(doc);
+    .then( data => {
+        res.status(data.status).send(data.doc);
+    });
+});
+
+router.delete('/contacts/:number', (req, res) => {
+    contactsService.deleteContact(req.params.number)
+    .then( data => {
+        res.status(data.status).send(data.doc);
     });
 });
 

@@ -8,13 +8,14 @@ app.use(bodyParser.json());
 
 mongoose.connect(keys.mongoURI, {
     useNewUrlParser: true,
-    useCreateIndex: true
+    useCreateIndex: true,
+    useFindAndModify: false
 });
 
 let contactsRoute = require('./routes/contacts');
 
 app.use((req, res, next) => {
-    console.log(` ${new Date().toString()} => ${req.method} ${req.originalUrl} ${req.body}`);
+    console.log(` ${new Date().toString()} => ${req.method} ${req.originalUrl} ${req.body.toString()}`);
     next();
 });
 app.use('/api/v1', contactsRoute);

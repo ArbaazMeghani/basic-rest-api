@@ -1,7 +1,19 @@
 let contactsModel = require('../models/contactsModel');
 
 function getAllContacts(firstname, lastname) {
-    return contactsModel.find().then(doc => {
+    let query = {};
+    if(firstname) {
+        query.firstname = firstname;
+    }
+    if(lastname) {
+        query.lastname = lastname;
+    }
+    return contactsModel.find(query).sort({
+        lastname: 1,
+        firstname: 1,
+        number: 1
+    })
+    .then(doc => {
         return {
             doc: doc,
             status: 200

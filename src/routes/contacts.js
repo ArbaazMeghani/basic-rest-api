@@ -17,6 +17,10 @@ router.get('/contacts/:number', (req,res) => {
 });
 
 router.post('/contacts', (req, res) => {
+    if(!req.body || !req.body.number) {
+        res.status(400).send("Missing Request Body");
+        return;
+    }
     contactsService.createContact(req.body)
     .then( (doc, status) => {
         res.status(status).sendStatus(doc);
@@ -24,6 +28,10 @@ router.post('/contacts', (req, res) => {
 });
 
 router.put('/contacts/:number', (req, res) => {
+    if(!req.body || !req.body.number) {
+        res.status(400).send("Missing Request Body");
+        return;
+    }
     contactsService.updateContact(req.params.number, req.body)
     .then( (doc, status) => {
         res.status(status).sendStatus(doc);

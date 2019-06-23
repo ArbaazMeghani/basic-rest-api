@@ -8,7 +8,8 @@ app.use(bodyParser.json());
 
 mongoose.connect(keys.mongoURI, {
     useNewUrlParser: true,
-    useCreateIndex: true
+    useCreateIndex: true,
+    useFindAndModify: false
 });
 
 let contactsRoute = require('./routes/contacts');

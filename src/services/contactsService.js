@@ -32,8 +32,26 @@ function createContact(body) {
     });
 }
 
+function updateContact(number, body) {
+    let query = {number: number};
+    return contactsModel.findOneAndUpdate(query, body)
+    .then(doc => {
+        if(!doc || doc.length == 0) {
+            return (doc, 404);
+        }
+        else {
+            return (doc, 200);
+        }
+    })
+    .catch(err => {
+        console.log(err);
+        return (err, 500);
+    });
+}
+
 module.exports = {
     getAllContacts: getAllContacts,
     getContact: getContact,
-    createContact: createContact
+    createContact: createContact,
+    updateContact: updateContact
 }

@@ -23,4 +23,11 @@ router.post('/contacts', (req, res) => {
     });
 });
 
+router.put('/contacts/:number', (req, res) => {
+    contactsService.updateContact(req.params.number, req.body)
+    .then( (doc, status) => {
+        res.status(status).sendStatus(doc);
+    });
+});
+
 module.exports = router;

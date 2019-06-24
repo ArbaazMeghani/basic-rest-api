@@ -36,7 +36,7 @@ Built using Node/Express and MongoDB</p>
         type: String,
         required: true,
         unique: true
-	}
+    }
 }
 </code></pre>
 

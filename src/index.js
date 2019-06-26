@@ -2,8 +2,10 @@ let express = require('express');
 let keys = require('../config/keys');
 let mongoose = require('mongoose');
 let bodyParser = require('body-parser');
+let cors = require('cors');
 
 let app = express();
+app.use(cors());
 app.use(bodyParser.json());
 
 mongoose.connect(keys.mongoURI, {

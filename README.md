@@ -33,10 +33,10 @@ Built using Node/Express and MongoDB</p>
     firstname: String,
     lastname: String,
     number: {
-		type: String,
-		required: true,
-		unique: true
-	}
+        type: String,
+        required: true,
+        unique: true
+    }
 }
 </code></pre>
 

@@ -7,6 +7,8 @@
 <p>This is a simple contacts list REST API.<br>
 Built using Node/Express and MongoDB</p>
 <p>Deployed to Heroku: <a href="https://contacts-rest-api.herokuapp.com/">https://contacts-rest-api.herokuapp.com</a></p>
+<p> See more information about this on my <a href="https://arbaazmeghani.com/portfolio/contacts-list/">portfolio</a><p>
+
 <h1 id="end-points">End Points</h1>
 <p>All end points are prefixed with <code>https://contacts-rest-api.herokuapp.com/api/v1</code></p>
 <p>Get All Contacts</p>
